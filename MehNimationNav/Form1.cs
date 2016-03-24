@@ -16,5 +16,10 @@ namespace MehNimationNav
         {
             InitializeComponent();
         }
+
+        private void Quitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
