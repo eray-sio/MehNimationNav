@@ -51,26 +51,43 @@ namespace MehNimationNav
 
         private void btnCreerNavire_Click(object sender, EventArgs e)
         {
-            unNavire = new Navire(
-                Convert.ToString(this.txtQteFret.Text), 
-                Convert.ToString(this.txtNomNavire.Text),
-                Convert.ToString(this.txtLibelleFret.Text), 
-                Convert.ToInt32(this.txtQteFret.Text)
-           );
-            this.lblNavireCree.Text = ("Votre Navire : \n" + ((char)13) +
-                "NoLloyds : " +
-                Convert.ToString(this.txtNoLloyds.Text) + ((char)13) +
-                "Nom : : " +
-                Convert.ToString(this.txtNomNavire.Text) + ((char)13) +
-                "LibelleFret : " +
-                Convert.ToString(this.txtLibelleFret.Text) + ((char)13) +
-                "Quantité Fret : " +
-                Convert.ToString(this.txtQteFret.Text));
-                
-                
-           
+            // Condition pour savoir si un des champs est Vide ! 
+            if (string.IsNullOrEmpty(this.txtNoLloyds.Text) &&
+                  string.IsNullOrEmpty(this.txtNomNavire.Text) &&
+                  string.IsNullOrEmpty(this.txtLibelleFret.Text) &&
+                  string.IsNullOrEmpty(this.txtQteFret.Text)) MessageBox.Show("Merci de renseigner TOUS les champs !");
+            else
+            {
+                // Instanciation d'un nouveau Navire
+                unNavire = new Navire(
+                    Convert.ToString(this.txtNoLloyds.Text),
+                    Convert.ToString(this.txtNomNavire.Text),
+                    Convert.ToString(this.txtLibelleFret.Text),
+                    Convert.ToInt32(this.txtQteFret.Text)
+                );
+
+                // On remplace le text du Label par les Valeurs qu'on a fourni lors de l'instanciation du Navire
+                this.lblNavireCree.Text = ("Votre Navire : \n" + ((char)13) +
+                     "NoLloyds : " +
+                        Convert.ToString(this.txtNoLloyds.Text) + ((char)13) +
+                    "Nom : : " +
+                        Convert.ToString(this.txtNomNavire.Text) + ((char)13) +
+                    "LibelleFret : " +
+                      Convert.ToString(this.txtLibelleFret.Text) + ((char)13) +
+                   "Quantité Fret : " +
+                       Convert.ToString(this.txtQteFret.Text));
+
+            }
+
+
 
         }
+
+
+
+
+
+
 
         private void txtNoLloyds_TextChanged(object sender, EventArgs e)
         {
