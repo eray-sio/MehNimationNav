@@ -21,6 +21,10 @@ namespace backendPort
                 _capaDispo = value;
             }
         }
+        public void ajouter (int meh)
+        {
+            this.CapaDispo = (int)meh;
+        }
         public void Stocker(int qte)
         {
             if (qte > this.CapaDispo) throw new Exception("Quantité supérieure à la capacité disponible.");

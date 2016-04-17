@@ -55,7 +55,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="list.cs" />
     <Compile Include="Navire.cs" />
     <Compile Include="Port.cs" />
     <Compile Include="Program.cs" />

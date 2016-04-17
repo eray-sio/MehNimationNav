@@ -14,6 +14,8 @@ namespace MehNimationNav
     public partial class Form1 : Form
     {
         Navire unNavire;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -76,18 +78,8 @@ namespace MehNimationNav
                       Convert.ToString(this.txtLibelleFret.Text) + ((char)13) +
                    "Quantité Fret : " +
                        Convert.ToString(this.txtQteFret.Text));
-
             }
-
-
-
         }
-
-
-
-
-
-
 
         private void txtNoLloyds_TextChanged(object sender, EventArgs e)
         {
@@ -95,6 +87,29 @@ namespace MehNimationNav
         }
 
         private void lblNavireCree_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtValiderPort_Click(object sender, EventArgs e)
+        {
+            List<Stockage> Stockages = new List<Stockage>();
+            Stockages.Add(new Stockage(Convert.ToInt32(this.txtStockageCapa.Text)));
+
+            foreach (var item in Stockages)
+            {
+                this.comboBox1.Items.Add(this.txtStockageCapa.Text);
+}
+        }
+
+
+
+        private void txtStockageCapa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
