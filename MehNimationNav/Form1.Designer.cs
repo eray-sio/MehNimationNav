@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.grpCreation = new System.Windows.Forms.GroupBox();
+            this.txtStockageCapa = new System.Windows.Forms.TextBox();
             this.txtValiderPort = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,8 +48,11 @@
             this.txtNoLloyds = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grpAnimation = new System.Windows.Forms.GroupBox();
-            this.txtStockageCapa = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.InitAnimation = new System.Windows.Forms.Button();
             this.grpCreation.SuspendLayout();
+            this.grpAnimation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpCreation
@@ -76,6 +81,14 @@
             this.grpCreation.TabStop = false;
             this.grpCreation.Text = "Creation de Navire / Port";
             this.grpCreation.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtStockageCapa
+            // 
+            this.txtStockageCapa.Location = new System.Drawing.Point(824, 46);
+            this.txtStockageCapa.Name = "txtStockageCapa";
+            this.txtStockageCapa.Size = new System.Drawing.Size(100, 22);
+            this.txtStockageCapa.TabIndex = 17;
+            this.txtStockageCapa.TextChanged += new System.EventHandler(this.txtStockageCapa_TextChanged);
             // 
             // txtValiderPort
             // 
@@ -222,6 +235,7 @@
             // 
             // grpAnimation
             // 
+            this.grpAnimation.Controls.Add(this.pictureBox1);
             this.grpAnimation.Location = new System.Drawing.Point(38, 219);
             this.grpAnimation.Name = "grpAnimation";
             this.grpAnimation.Size = new System.Drawing.Size(1058, 162);
@@ -230,13 +244,25 @@
             this.grpAnimation.Text = "Rendu :";
             this.grpAnimation.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // txtStockageCapa
+            // pictureBox1
             // 
-            this.txtStockageCapa.Location = new System.Drawing.Point(824, 46);
-            this.txtStockageCapa.Name = "txtStockageCapa";
-            this.txtStockageCapa.Size = new System.Drawing.Size(100, 22);
-            this.txtStockageCapa.TabIndex = 17;
-            this.txtStockageCapa.TextChanged += new System.EventHandler(this.txtStockageCapa_TextChanged);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // InitAnimation
+            // 
+            this.InitAnimation.Location = new System.Drawing.Point(425, 387);
+            this.InitAnimation.Name = "InitAnimation";
+            this.InitAnimation.Size = new System.Drawing.Size(120, 51);
+            this.InitAnimation.TabIndex = 10;
+            this.InitAnimation.Text = "Init Animation";
+            this.InitAnimation.UseVisualStyleBackColor = true;
+            this.InitAnimation.Click += new System.EventHandler(this.InitAnimation_Click);
             // 
             // Form1
             // 
@@ -244,6 +270,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1130, 505);
+            this.Controls.Add(this.InitAnimation);
             this.Controls.Add(this.grpAnimation);
             this.Controls.Add(this.grpCreation);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -252,6 +279,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grpCreation.ResumeLayout(false);
             this.grpCreation.PerformLayout();
+            this.grpAnimation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,6 +306,8 @@
         private System.Windows.Forms.Button txtValiderPort;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtStockageCapa;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button InitAnimation;
     }
 }
 

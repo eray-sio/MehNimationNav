@@ -23,7 +23,7 @@ namespace MehNimationNav
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -112,6 +112,13 @@ namespace MehNimationNav
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void InitAnimation_Click(object sender, EventArgs e)
+        {
+            // TODO Gestion d'animations 
+            // Generation de PictureBox pour chaque Stockage Créé
+            // Deplacement De PictureBox en PictureBox
         }
     }
 }
