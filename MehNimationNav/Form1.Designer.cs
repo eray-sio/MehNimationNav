@@ -35,18 +35,21 @@
             // Suivant
             // 
             this.Suivant.AllowDrop = true;
-            this.Suivant.Location = new System.Drawing.Point(299, 178);
+            this.Suivant.Location = new System.Drawing.Point(399, 219);
+            this.Suivant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Suivant.Name = "Suivant";
-            this.Suivant.Size = new System.Drawing.Size(75, 23);
+            this.Suivant.Size = new System.Drawing.Size(100, 28);
             this.Suivant.TabIndex = 0;
             this.Suivant.Text = "Suivant";
             this.Suivant.UseVisualStyleBackColor = true;
+            this.Suivant.Click += new System.EventHandler(this.Suivant_Click);
             // 
             // Quitter
             // 
-            this.Quitter.Location = new System.Drawing.Point(299, 207);
+            this.Quitter.Location = new System.Drawing.Point(399, 255);
+            this.Quitter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Quitter.Name = "Quitter";
-            this.Quitter.Size = new System.Drawing.Size(75, 23);
+            this.Quitter.Size = new System.Drawing.Size(100, 28);
             this.Quitter.TabIndex = 1;
             this.Quitter.Text = "Quitter";
             this.Quitter.UseVisualStyleBackColor = true;
@@ -54,11 +57,12 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 261);
+            this.ClientSize = new System.Drawing.Size(549, 321);
             this.Controls.Add(this.Quitter);
             this.Controls.Add(this.Suivant);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

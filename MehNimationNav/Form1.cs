@@ -1,4 +1,5 @@
-﻿using System;
+﻿using backendPort;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace MehNimationNav
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +22,11 @@ namespace MehNimationNav
         private void Quitter_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Suivant_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
